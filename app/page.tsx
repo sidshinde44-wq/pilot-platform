@@ -1,65 +1,161 @@
-import Image from "next/image";
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="space-y-16">
+
+      {/* HERO */}
+      <section className="text-center space-y-6 py-10">
+        <h1 className="text-3xl md:text-5xl font-bold">
+          Become a Pilot in India — Step by Step
+        </h1>
+
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Everything you need to start your pilot career — roadmap, cost, airline preparation, and real recruitment tracking.
+        </p>
+
+        <div className="flex justify-center gap-4 flex-wrap">
+          <Link href="/pilot-career-roadmap" className="bg-black text-white px-6 py-3 rounded-xl">
+            Start Here
+          </Link>
+
+          <Link href="/tools/cpl-cost-calculator" className="border px-6 py-3 rounded-xl">
+            Calculate CPL Cost
+          </Link>
+        </div>
+      </section>
+
+      {/* PRIMARY ACTIONS */}
+      <section className="grid md:grid-cols-3 gap-6">
+
+        <Link href="/pilot-career-roadmap" className="border p-6 rounded-2xl hover:shadow">
+          <h3 className="font-semibold text-lg">Pilot Roadmap</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Step-by-step path from 12th to airline job.
           </p>
+        </Link>
+
+        <Link href="/tools" className="border p-6 rounded-2xl hover:shadow">
+          <h3 className="font-semibold text-lg">Tools</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Calculate cost, check eligibility, practice ADAPT.
+          </p>
+        </Link>
+
+        <Link href="/recruitment-tracker" className="border p-6 rounded-2xl hover:shadow">
+          <h3 className="font-semibold text-lg">
+            Recruitment Tracker <span className="text-red-500">●</span>
+          </h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Track real airline hiring updates.
+          </p>
+        </Link>
+
+      </section>
+
+      {/* TOOLS SECTION */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Tools for Pilot Aspirants</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <Link href="/tools/cpl-cost-calculator" className="border p-6 rounded-2xl hover:shadow">
+            CPL Cost Calculator
+          </Link>
+
+          <Link href="/tools/airline-eligibility" className="border p-6 rounded-2xl hover:shadow">
+            Airline Eligibility Checker
+          </Link>
+
+          <Link href="/tools/adapt-practice" className="border p-6 rounded-2xl hover:shadow">
+            ADAPT Practice
+          </Link>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ROADMAP PREVIEW */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Pilot Career Path</h2>
+
+        <div className="border rounded-2xl p-6 text-center text-sm">
+          12th → DGCA Medical → Ground School → CPL → Type Rating → Airline Job
         </div>
-      </main>
+
+        <div className="text-center">
+          <Link href="/pilot-career-roadmap" className="text-blue-600">
+            View Full Roadmap →
+          </Link>
+        </div>
+      </section>
+
+      {/* AIRLINES */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Airline Selection Guides</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <Link href="/indigo-selection-process" className="border p-6 rounded-2xl hover:shadow">
+            IndiGo Selection Process
+          </Link>
+
+          <Link href="/air-india-recruitment" className="border p-6 rounded-2xl hover:shadow">
+            Air India Hiring Guide
+          </Link>
+
+          <Link href="/akasa-recruitment" className="border p-6 rounded-2xl hover:shadow">
+            Akasa Air Recruitment
+          </Link>
+
+        </div>
+      </section>
+
+      {/* TRACKER HIGHLIGHT */}
+      <section className="border rounded-2xl p-8 text-center space-y-4 bg-gray-50">
+        <h2 className="text-2xl font-semibold">
+          Live Recruitment Tracking
+        </h2>
+
+        <p className="text-gray-600">
+          See when candidates receive ADAPT calls and predict your turn.
+        </p>
+
+        <Link href="/recruitment-tracker" className="bg-black text-white px-6 py-3 rounded-xl">
+          Open Tracker
+        </Link>
+      </section>
+
+      {/* SOCIAL PROOF */}
+      <section className="grid md:grid-cols-3 gap-6 text-center">
+
+        <div>
+          <h3 className="text-2xl font-bold">400+</h3>
+          <p className="text-gray-600 text-sm">Candidates Tracked</p>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold">Real Data</h3>
+          <p className="text-gray-600 text-sm">From Pilot Aspirants</p>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold">Updated Daily</h3>
+          <p className="text-gray-600 text-sm">Recruitment Insights</p>
+        </div>
+
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="text-center space-y-4">
+        <h2 className="text-2xl font-semibold">
+          Start Your Pilot Journey Today
+        </h2>
+
+        <Link href="/pilot-career-roadmap" className="bg-black text-white px-6 py-3 rounded-xl">
+          Get Started
+        </Link>
+      </section>
+
     </div>
-  );
+  )
 }
