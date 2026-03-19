@@ -5,157 +5,162 @@ export default function Home() {
     <div className="space-y-16">
 
       {/* HERO */}
-      <section className="text-center space-y-6 py-10">
-        <h1 className="text-3xl md:text-5xl font-bold">
-          Become a Pilot in India — Step by Step
+      <section className="text-center space-y-6 py-12">
+
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          Become a Pilot in India — With a Clear Plan & Real Hiring Data
         </h1>
 
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Everything you need to start your pilot career — roadmap, cost, airline preparation, and real recruitment tracking.
+          Track real airline recruitment, predict your ADAPT call, and follow a
+          proven roadmap used by 400+ pilot aspirants.
         </p>
 
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link href="/pilot-career-roadmap" className="bg-black text-white px-6 py-3 rounded-xl">
-            Start Here
-          </Link>
+    <div className="flex justify-center gap-4 flex-wrap">
+        <Link href="/pilot-career-roadmap" className="bg-black text-white px-6 py-3 rounded-xl">
+          Start Your Pilot Journey
+        </Link>
 
-          <Link href="/tools/cpl-cost-calculator" className="border px-6 py-3 rounded-xl">
-            Calculate CPL Cost
-          </Link>
-        </div>
-      </section>
+        <Link href="/recruitment-tracker" className="border px-6 py-3 rounded-xl">
+          Check Hiring Status
+        </Link>
+    </div>
+
+  {/* TRUST STRIP */}
+  <div className="flex justify-center gap-6 text-sm text-gray-500 pt-4">
+    <span>400+ Candidates Tracked</span>
+    <span>Real Recruitment Data</span>
+    <span>Updated Daily</span>
+  </div>
+
+</section>
 
       {/* PRIMARY ACTIONS */}
       <section className="grid md:grid-cols-3 gap-6">
 
-        <Link href="/pilot-career-roadmap" className="border p-6 rounded-2xl hover:shadow">
-          <h3 className="font-semibold text-lg">Pilot Roadmap</h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Step-by-step path from 12th to airline job.
-          </p>
-        </Link>
+  <Link href="/pilot-career-roadmap" className="border p-6 rounded-2xl hover:shadow">
+    <h3 className="font-semibold text-lg">Start from Zero</h3>
+    <p className="text-sm text-gray-600 mt-2">
+      Step-by-step roadmap from 12th to airline job.
+    </p>
+  </Link>
 
-        <Link href="/tools" className="border p-6 rounded-2xl hover:shadow">
-          <h3 className="font-semibold text-lg">Tools</h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Calculate cost, check eligibility, practice ADAPT.
-          </p>
-        </Link>
+  <Link href="/tools/cpl-cost-calculator" className="border p-6 rounded-2xl hover:shadow">
+    <h3 className="font-semibold text-lg">Know Your Investment</h3>
+    <p className="text-sm text-gray-600 mt-2">
+      Calculate exact CPL cost based on your plan.
+    </p>
+  </Link>
 
-        <Link href="/recruitment-tracker" className="border p-6 rounded-2xl hover:shadow">
-          <h3 className="font-semibold text-lg">
-            Recruitment Tracker <span className="text-red-500">●</span>
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Track real airline hiring updates.
-          </p>
-        </Link>
+  <Link href="/recruitment-tracker" className="border p-6 rounded-2xl hover:shadow">
+    <h3 className="font-semibold text-lg">
+      Track Your Selection <span className="text-red-500">●</span>
+    </h3>
+    <p className="text-sm text-gray-600 mt-2">
+      See who is getting ADAPT calls right now.
+    </p>
+  </Link>
 
-      </section>
+</section>
 
-      {/* TOOLS SECTION */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Tools for Pilot Aspirants</h2>
+<section className="border rounded-2xl p-8 bg-gray-50 space-y-4">
 
-        <div className="grid md:grid-cols-3 gap-6">
+  <h2 className="text-2xl font-semibold text-center">
+    Live Airline Recruitment Activity
+  </h2>
 
-          <Link href="/tools/cpl-cost-calculator" className="border p-6 rounded-2xl hover:shadow">
-            CPL Cost Calculator
-          </Link>
+  <p className="text-center text-gray-600">
+    Real-time insights from candidates across India
+  </p>
 
-          <Link href="/tools/airline-eligibility" className="border p-6 rounded-2xl hover:shadow">
-            Airline Eligibility Checker
-          </Link>
+  <div className="grid md:grid-cols-3 gap-4 text-center text-sm">
 
-          <Link href="/tools/adapt-practice" className="border p-6 rounded-2xl hover:shadow">
-            ADAPT Practice
-          </Link>
-
-        </div>
-      </section>
-
-      {/* ROADMAP PREVIEW */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Pilot Career Path</h2>
-
-        <div className="border rounded-2xl p-6 text-center text-sm">
-          12th → DGCA Medical → Ground School → CPL → Type Rating → Airline Job
-        </div>
-
-        <div className="text-center">
-          <Link href="/pilot-career-roadmap" className="text-blue-600">
-            View Full Roadmap →
-          </Link>
-        </div>
-      </section>
-
-      {/* AIRLINES */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Airline Selection Guides</h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-
-          <Link href="/indigo-selection-process" className="border p-6 rounded-2xl hover:shadow">
-            IndiGo Selection Process
-          </Link>
-
-          <Link href="/air-india-recruitment" className="border p-6 rounded-2xl hover:shadow">
-            Air India Hiring Guide
-          </Link>
-
-          <Link href="/akasa-recruitment" className="border p-6 rounded-2xl hover:shadow">
-            Akasa Air Recruitment
-          </Link>
-
-        </div>
-      </section>
-
-      {/* TRACKER HIGHLIGHT */}
-      <section className="border rounded-2xl p-8 text-center space-y-4 bg-gray-50">
-        <h2 className="text-2xl font-semibold">
-          Live Recruitment Tracking
-        </h2>
-
-        <p className="text-gray-600">
-          See when candidates receive ADAPT calls and predict your turn.
-        </p>
-
-        <Link href="/recruitment-tracker" className="bg-black text-white px-6 py-3 rounded-xl">
-          Open Tracker
-        </Link>
-      </section>
-
-      {/* SOCIAL PROOF */}
-      <section className="grid md:grid-cols-3 gap-6 text-center">
-
-        <div>
-          <h3 className="text-2xl font-bold">400+</h3>
-          <p className="text-gray-600 text-sm">Candidates Tracked</p>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold">Real Data</h3>
-          <p className="text-gray-600 text-sm">From Pilot Aspirants</p>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold">Updated Daily</h3>
-          <p className="text-gray-600 text-sm">Recruitment Insights</p>
-        </div>
-
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="text-center space-y-4">
-        <h2 className="text-2xl font-semibold">
-          Start Your Pilot Journey Today
-        </h2>
-
-        <Link href="/pilot-career-roadmap" className="bg-black text-white px-6 py-3 rounded-xl">
-          Get Started
-        </Link>
-      </section>
-
+    <div className="border rounded-xl p-4">
+      <p className="font-semibold">Latest ADAPT Call</p>
+      <p className="text-gray-600">Today, 2:14 PM</p>
     </div>
-  )
-}
+
+    <div className="border rounded-xl p-4">
+      <p className="font-semibold">Latest Batch Called</p>
+      <p className="text-gray-600">10:32 AM Result Time</p>
+    </div>
+
+    <div className="border rounded-xl p-4">
+      <p className="font-semibold">Total Candidates</p>
+      <p className="text-gray-600">400+</p>
+    </div>
+
+  </div>
+
+  <div className="text-center">
+    <Link href="/recruitment-tracker" className="text-blue-600">
+      View Full Tracker →
+    </Link>
+  </div>
+
+</section>
+
+     <section className="space-y-6">
+
+  <h2 className="text-2xl font-semibold">
+    Tools Built for Pilot Selection
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    <Link href="/tools/adapt-practice" className="border p-6 rounded-2xl hover:shadow">
+      <h3 className="font-semibold">ADAPT Practice</h3>
+      <p className="text-sm text-gray-600 mt-2">
+        Prepare for airline aptitude tests.
+      </p>
+    </Link>
+
+    <Link href="/tools/cpl-cost-calculator" className="border p-6 rounded-2xl hover:shadow">
+      <h3 className="font-semibold">CPL Cost Calculator</h3>
+      <p className="text-sm text-gray-600 mt-2">
+        Estimate total training investment.
+      </p>
+    </Link>
+
+    <Link href="/tools/airline-eligibility" className="border p-6 rounded-2xl hover:shadow">
+      <h3 className="font-semibold">Eligibility Checker</h3>
+      <p className="text-sm text-gray-600 mt-2">
+        Check if you qualify for airlines.
+      </p>
+    </Link>
+
+  </div>
+
+</section>
+
+<section className="text-center space-y-6">
+
+  <h2 className="text-2xl font-semibold">
+    Your Pilot Journey Simplified
+  </h2>
+
+  <div className="border rounded-2xl p-6 text-sm">
+    12th → DGCA Medical → Ground School → CPL → Type Rating → Airline Job
+  </div>
+
+  <Link href="/pilot-career-roadmap" className="text-blue-600">
+    View Detailed Roadmap →
+  </Link>
+
+</section>
+
+    <section className="text-center space-y-4 py-10">
+
+  <h2 className="text-2xl font-semibold">
+    Don’t Guess Your Pilot Career — Track It
+  </h2>
+
+  <p className="text-gray-600">
+    Use real data to plan, prepare, and predict your airline selection.
+  </p>
+
+  <Link href="/recruitment-tracker" className="bg-black text-white px-6 py-3 rounded-xl">
+    Open Recruitment Tracker
+  </Link>
+
+</section>
